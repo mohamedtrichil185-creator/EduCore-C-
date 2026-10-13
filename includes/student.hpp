@@ -8,8 +8,13 @@ using namespace std;
 
 struct	Student
 {
-	int	Age;
-	string	FullName;
+	size_t Age;
+	size_t	Id;
+	string	first_name;
+	string	last_name;
+	string	City;
+	string	date_of_birth;
+
 };
 
 

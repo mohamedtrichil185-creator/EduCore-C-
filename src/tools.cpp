@@ -24,8 +24,12 @@ string ReadString(string message)
 
 void PrintStudent(const Student &student)
 {
-	cout << "Age      : " << student.Age << endl;
-	cout << "Full Name: " << student.FullName << endl;
+	cout	<< "first name	: " << student.first_name << endl;
+	cout	<< "last name	: " << student.last_name << endl;
+	cout	<< "age 	: " << student.Age << endl;
+	cout	<< "Id		: " << student.Id << endl;
+	cout	<< "City	: " << student.City << endl;
+	cout	<< "date of birth : " << student.date_of_birth << endl;
 }
 
 void PrintNode(const Node *head)
@@ -38,4 +42,11 @@ void PrintNode(const Node *head)
 
 		head = head->next;
 	}
+}
+
+int	GenerateStudentId()
+{
+	static int	nextId = 1;
+
+	return (nextId++);
 }

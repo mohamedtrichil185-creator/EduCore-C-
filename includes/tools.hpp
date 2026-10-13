@@ -9,5 +9,6 @@ int	ReadPositiveNumber(string message);
 string	ReadString(string message);
 void PrintStudent(const Student &student);
 void PrintNode(const Node *head);
+int	GenerateStudentId();
 
 #endif
