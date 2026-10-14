@@ -9,10 +9,7 @@ int	main()
 	head = NULL;
 	
 	AddStudent(head, FillData);
-	AddStudent(head, FillData);
-	AddStudent(head, FillData);
-	AddStudent(head, FillData);
-	AddStudent(head, FillData);
+	
 	ShowAllStudents(head);
 	delete (head);
 	return 0;
