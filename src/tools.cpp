@@ -32,6 +32,16 @@ void PrintStudent(const Student &student)
 	cout	<< "date of birth : " << student.date_of_birth << endl;
 }
 
+void PrintStudentInFile(const Student &student, std::ofstream &file)
+{
+	file	<< student.first_name << endl;
+	file	<< student.last_name << endl;
+	file	<< student.Age << endl;
+	file	<< student.Id << endl;
+	file	<< student.City << endl;
+	file	<< student.date_of_birth << endl;
+}
+
 void PrintNode(const Node *head)
 {
 	while (head)
@@ -49,4 +59,18 @@ int	GenerateStudentId()
 	static int	nextId = 1;
 
 	return (nextId++);
+}
+
+void	save_student_in_file(const Node *head)
+{
+	ofstream file("student.txt", ios::app);
+
+	if (!file.is_open())
+		return ;
+
+	while (head)
+	{
+		PrintStudentInFile(head->Data, file);
+		head = head->next;
+	}
 }

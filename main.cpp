@@ -9,8 +9,8 @@ int	main()
 	head = NULL;
 	
 	AddStudent(head, FillData);
-	
-	ShowAllStudents(head);
+
+	save_student_in_file(head);
 	delete (head);
 	return 0;
 }
